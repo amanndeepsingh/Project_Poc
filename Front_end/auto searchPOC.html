@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>auto complete POC</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+<h1 >Stock auto search</h1>
+        var stock = [
+            "Shirt",
+            "Pant",
+            "Skirt",
+            "Shoes",
+            "shocks"
+        ];
+
+
+        // list of available options
+        var n = stock.length;//length of stock
+
+        function mylist(value){
+         document.getElementById('datalist').innerHTML="";
+            l.value.length;
+
+            for(var i=0 ; i <n ;i++){
+                if(((tags[i].toLowerCase()).indexOf(value.toLowerCase())) > -1)
+                {
+                  var node = document.createElement("option");
+                  var val = document.createTextNode(tags[i]);
+                  node.appendChild(val)
+
+                  document.getElementById(datalist).appendChild(node);
+                }
+            }
+        
+        }
+        
+        </script>
+
+        <input type="text" list="datalist" onkeyup="mylist.value">
+
+        <datalist id="datalist">
+            <option value="Shirt"></option>
+            <option value="pant"></option>
+            <option value="skirt"></option>
+            <option values="shoes"></option>
+            <option vsalue="socks"></option>
+        </datalist>
+    </body>
+</html>
